@@ -94,12 +94,14 @@ alias mss='mysql.server start'
 alias d='docker'
 alias dp='docker ps'
 
-#docker-compose
-alias dcu='docker-compose up'
-alias dcd='docker-compose down'
-alias dcs='docker-compose start'
-alias dce='docker-compose end'
-alias dcr='docker-compose restart'
+#docker compose
+alias dcu='docker compose up'
+alias dcd='docker compose down'
+alias dcs='docker compose start'
+alias dce='docker compose end'
+alias dcr='docker compose restart'
+alias dcl='docker compose logs'
+alias dcp='docker compose ps'
 
 #laravel(phper向け)
 alias art='php artisan'
