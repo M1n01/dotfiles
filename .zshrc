@@ -1,3 +1,5 @@
+# CodeWhisperer pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh"
 export USER=abeminato
 export MAIL=$USER@student.42tokyo.jp
 
@@ -19,6 +21,7 @@ export LIBRARY_PATH="/opt/homebrew/opt/readline/lib"
 
 # makefile
 alias mk='make -j'
+alias remake='make fclean && make -j'
 
 # c
 alias gccw='gcc -Wall -Wextra -Werror'
@@ -29,25 +32,43 @@ alias g++='g++ -std=c++11'
 # git
 alias g='git'
 alias ga='git add'
+## add
 alias gap='git add -p'
 alias ga.='git add .'
+## commit
 alias gc='git commit'
 alias gcm='git commit -m'
-alias gco='git checkout'
 alias gca='git commit --amend'
-alias gcb='git checkout -b'
+## checkout
+alias gco='git switch'
+alias gcb='git switch -c'
 alias gsw='git switch'
-alias gst='git status'
-alias gbr='git branch'
-alias gps='git push'
-alias push='git push'
-alias gpl='git pull'
-alias pull='git pull'
-alias gf='git fetch'
-alias gl='git log'
-alias glo='git log --oneline'
+alias gsc='git switch -c'
+## status
+alias gs='git status -sb'
  # Untracked filesを表示せず，not stagedと，stagedだけの状態を出力する
 alias stt='git status -uno'
+## stash
+alias gst='git stash'
+alias gsp='git stash pop'
+## branch
+alias gbr='git branch'
+## push
+alias gps='git push'
+alias push='git push'
+## pull
+alias gpl='git pull'
+alias pull='git pull'
+## fetch
+alias gf='git fetch'
+## log
+alias gl='git log'
+alias glg='git log --graph --abbrev-commit --date=iso '
+alias glo='git log --oneline'
+## cherry-pick
+alias gcp='git cherry-pick'
+## history
+alias gh='git history'
 
 # Go
 alias gofa='gofmt -w ex*/*.go'
@@ -138,7 +159,7 @@ eval $(/opt/homebrew/bin/brew shellenv)
 prompt_precmd() {
 	local magenta=$'\e[35m' cyan=$'\e[36m' reset=$'\e[m'
 	local branch="$(git branch --show-current)"
-	PROMPT="%{${magenta}%}[%/]%{${reset}%} [%{${cyan}%}${branch}%{${reset}%}] <`git config user.name`>
+	PROMPT="%{${magenta}%}[%/]%{${reset}%} [ %{${cyan}%}${branch}%{${reset}%}] <`git config user.name`>
  $ "
 }
 
@@ -152,3 +173,6 @@ alias p='python3'
 
 # cursor
 alias cur='cursor'
+
+# CodeWhisperer post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
