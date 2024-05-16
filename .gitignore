@@ -9,6 +9,9 @@
 
 !/.gitignore_global
 
+!/.bin/
+!/.bin/**
+
 !/README.md
 !.gitignore
 !.gitkeep
