@@ -1,24 +1,3 @@
-# CodeWhisperer pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh"
-export USER=abeminato
-export MAIL=$USER@student.42tokyo.jp
-
-export PATH="/opt/homebrew/bin:$PATH"
-
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-export PATH="$PATH:/Users/abeminato/development/flutter/bin"
-export PATH=/opt/homebrew/opt/php/bin:$PATH
-
-# 42
-alias norm='norminette -R CheckForbiddenSourceHeader'
-alias norma='norminette -R CheckForbiddenSourceHeader ft*.c'
-alias normh='norminette -R CheckDefine'
-alias 42push='GIT_SSH_COMMAND="ssh -J git@vgs-gw.42tokyo.jp:4242" git push'
-alias 42clone='GIT_SSH_COMMAND="ssh -J git@vgs-gw.42tokyo.jp:4242" git clone'
-alias 42pull='GIT_SSH_COMMAND="ssh -J git@vgs-gw.42tokyo.jp:4242" git pull'
-export LIBRARY_PATH="/opt/homebrew/opt/readline/lib"
-
 # makefile
 alias mk='make -j'
 alias remake='make fclean && make -j'
@@ -138,28 +117,12 @@ alias seed='art db:seed'
 alias nrb='npm run build'
 alias nrd='npm run dev'
 
-# howcollect
-export PATH="/usr/local/opt/llvm/bin:$PATH"
-
-function gitmain(){
-	git config --global user.name "M1n01"
-	git config --global user.email "abe.minato.bz@gmail.com"
-	source ~/.zshrc
-}
-
-function gitsub(){
-	git config --global user.name "minatoabe"
-	git config --global user.email "m.abe.howcollect@gmail.com"
-	source ~/.zshrc
-}
-eval $(/opt/homebrew/bin/brew shellenv)
-
 # zsh表示設定
 ## エンターキーが押される旅に実行される処理
 prompt_precmd() {
 	local magenta=$'\e[35m' cyan=$'\e[36m' reset=$'\e[m'
 	local branch="$(git branch --show-current)"
-	PROMPT="%{${magenta}%}[%/]%{${reset}%} [ %{${cyan}%}${branch}%{${reset}%}] <`git config user.name`>
+	PROMPT="%{${magenta}%}[%/]%{${reset}%} <`git config user.name`>
  $ "
 }
 
@@ -173,6 +136,3 @@ alias p='python3'
 
 # cursor
 alias cur='cursor'
-
-# CodeWhisperer post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"

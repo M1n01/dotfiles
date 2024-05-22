@@ -1,38 +1,3 @@
-"dein Scripts-------------------------:
-if &compatible
-  set nocompatible               " Be improved
-endif
-
-" Required:
-set runtimepath+=/Users/abeminato/.cache/dein/repos/github.com/Shougo/dein.vim
-
-" Required:
-call dein#begin('/Users/abeminato/.cache/dein')
-
-" Let dein manage dein
-" Required:
-call dein#add('/Users/abeminato/.cache/dein/repos/github.com/Shougo/dein.vim')
-
-" Add or remove your plugins here like this:
-"call dein#add('Shougo/neosnippet.vim')
-"call dein#add('Shougo/neosnippet-snippets')
-
-call dein#add('42Paris/42header')
-call dein#add("cohama/lexima.vim")
-
-" Required:
-call dein#end()
-
-" Required:
-filetype plugin indent on
-syntax enable
-
-"If you want to install not installed plugins on startup.
-"if dein#check_install()
-"  call dein#install()
-"endif
-
-"End dein Scripts-------------------------:
 
 let g:indentLine_color_term = 239
 let g:indentLine_color_gui = '#708090'
