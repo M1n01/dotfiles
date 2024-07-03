@@ -148,7 +148,7 @@ alias nrd='npm run dev'
 prompt_precmd() {
 	local magenta=$'\e[35m' cyan=$'\e[36m' reset=$'\e[m'
 	local branch="$(git branch --show-current)"
-	PROMPT="%{${magenta}%}[%/]%{${reset}%} <`git config user.name`>
+	PROMPT="%{${magenta}%}[%/]%{${reset}%} [ %{${cyan}%}${branch}%{${reset}%}] <`git config user.name`>
  $ "
 }
 
