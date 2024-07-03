@@ -1,3 +1,24 @@
+# Q pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
+export USER=abeminato
+export MAIL=$USER@student.42tokyo.jp
+
+export PATH="/opt/homebrew/bin:$PATH"
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+export PATH="$PATH:/Users/abeminato/development/flutter/bin"
+export PATH=/opt/homebrew/opt/php/bin:$PATH
+
+# 42
+alias norm='norminette -R CheckForbiddenSourceHeader'
+alias norma='norminette -R CheckForbiddenSourceHeader ft*.c'
+alias normh='norminette -R CheckDefine'
+alias 42push='GIT_SSH_COMMAND="ssh -J git@vgs-gw.42tokyo.jp:4242" git push'
+alias 42clone='GIT_SSH_COMMAND="ssh -J git@vgs-gw.42tokyo.jp:4242" git clone'
+alias 42pull='GIT_SSH_COMMAND="ssh -J git@vgs-gw.42tokyo.jp:4242" git pull'
+export LIBRARY_PATH="/opt/homebrew/opt/readline/lib"
+
 # makefile
 alias mk='make -j'
 alias remake='make fclean && make -j'
@@ -18,6 +39,9 @@ alias ga.='git add .'
 alias gc='git commit'
 alias gcm='git commit -m'
 alias gca='git commit --amend'
+## merge
+alias gm='git merge'
+alias gms='git merge --squash'
 ## checkout
 alias gco='git switch'
 alias gcb='git switch -c'
@@ -28,16 +52,16 @@ alias gs='git status -sb'
  # Untracked filesを表示せず，not stagedと，stagedだけの状態を出力する
 alias stt='git status -uno'
 ## stash
-alias gst='git stash'
+alias gst='git stash -u'
 alias gsp='git stash pop'
+alias gsl='git stash list'
+alias gsc='git stash clear'
 ## branch
 alias gbr='git branch'
 ## push
 alias gps='git push'
-alias push='git push'
 ## pull
 alias gpl='git pull'
-alias pull='git pull'
 ## fetch
 alias gf='git fetch'
 ## log
@@ -80,6 +104,7 @@ alias pwdc='pwd | tr -d "\n" | pbcopy'
 
 # 編集
 alias zshrc='vi ~/.zshrc'
+alias reload='source ~/.zshrc'
 
 # 安全策
 alias cp='cp -i'
@@ -95,6 +120,7 @@ alias d='docker'
 alias dp='docker ps'
 
 #docker compose
+alias dc='docker compose'
 alias dcu='docker compose up'
 alias dcd='docker compose down'
 alias dcs='docker compose start'
@@ -133,6 +159,11 @@ add-zsh-hook precmd prompt_precmd
 
 # python
 alias p='python3'
+alias pip='pip3'
 
 # cursor
 alias cur='cursor'
+
+# Q post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
+export PATH="/opt/homebrew/opt/git/bin:$PATH"
