@@ -118,8 +118,10 @@ alias mss='mysql.server start'
 # docker
 alias d='docker'
 alias dp='docker ps'
+alias di='docker images'
+alias drm='docker system prune'
 
-#docker compose
+# docker compose
 alias dc='docker compose'
 alias dcu='docker compose up'
 alias dcd='docker compose down'
@@ -142,6 +144,12 @@ alias seed='art db:seed'
 #npm
 alias nrb='npm run build'
 alias nrd='npm run dev'
+
+# npx
+## hardhat
+alias nhc='npx hardhat compile'
+alias nht='npx hardhat test'
+alias nhn='npx hardhat node'
 
 # zsh表示設定
 ## エンターキーが押される旅に実行される処理
