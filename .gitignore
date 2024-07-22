@@ -4,6 +4,7 @@
 
 ### not ignore ###
 !/.zshrc
+!/.zshenv
 
 !/.vimrc
 
