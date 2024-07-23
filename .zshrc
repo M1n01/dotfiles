@@ -1,24 +1,3 @@
-# Q pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
-export USER=abeminato
-export MAIL=$USER@student.42tokyo.jp
-
-export PATH="/opt/homebrew/bin:$PATH"
-
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-export PATH="$PATH:/Users/abeminato/development/flutter/bin"
-export PATH=/opt/homebrew/opt/php/bin:$PATH
-
-# 42
-alias norm='norminette -R CheckForbiddenSourceHeader'
-alias norma='norminette -R CheckForbiddenSourceHeader ft*.c'
-alias normh='norminette -R CheckDefine'
-alias 42push='GIT_SSH_COMMAND="ssh -J git@vgs-gw.42tokyo.jp:4242" git push'
-alias 42clone='GIT_SSH_COMMAND="ssh -J git@vgs-gw.42tokyo.jp:4242" git clone'
-alias 42pull='GIT_SSH_COMMAND="ssh -J git@vgs-gw.42tokyo.jp:4242" git pull'
-export LIBRARY_PATH="/opt/homebrew/opt/readline/lib"
-
 # makefile
 alias mk='make -j'
 alias remake='make fclean && make -j'
@@ -151,27 +130,10 @@ alias nhc='npx hardhat compile'
 alias nht='npx hardhat test'
 alias nhn='npx hardhat node'
 
-# zsh表示設定
-## エンターキーが押される旅に実行される処理
-prompt_precmd() {
-	local magenta=$'\e[35m' cyan=$'\e[36m' reset=$'\e[m'
-	local branch="$(git branch --show-current)"
-	PROMPT="%{${magenta}%}[%/]%{${reset}%} [ %{${cyan}%}${branch}%{${reset}%}] <`git config user.name`>
- $ "
-}
-
-## precmd フックを登録する
-autoload -Uz add-zsh-hook
-add-zsh-hook precmd prompt_precmd
-
-
 # python
 alias p='python3'
+alias python='python3'
 alias pip='pip3'
 
-# cursor
-alias cur='cursor'
-
-# Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
-export PATH="/opt/homebrew/opt/git/bin:$PATH"
+# ローカルの設定を読み込み
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
