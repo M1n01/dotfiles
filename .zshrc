@@ -60,7 +60,6 @@ cdls ()
 {
     \cd "$@" && ls && source ~/.zshrc
 }
-
 alias cd="cdls"
 
 # ls
@@ -68,6 +67,9 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 alias ls='ls --color=auto -GF'
 alias ll='ls -alhF'
 alias la='ls -a'
+
+# mkdir
+alias mkdir='mkdir -p'
 
 # cd
 alias ..='cd ..'
@@ -133,7 +135,7 @@ alias nhn='npx hardhat node'
 # python
 alias p='python3'
 alias python='python3'
-alias pip='pip3'
+alias pip='pipx'
 
 # ローカルの設定を読み込み
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
