@@ -29,7 +29,7 @@ alias gsc='git switch -c'
 ## status
 alias gs='git status -sb'
  # Untracked filesを表示せず，not stagedと，stagedだけの状態を出力する
-alias stt='git status -uno'
+alias gstt='git status -uno'
 ## stash
 alias gst='git stash -u'
 alias gsp='git stash pop'
@@ -58,7 +58,7 @@ alias gofa='gofmt -w ex*/*.go'
 # terminal
 cdls ()
 {
-    \cd "$@" && ls && source ~/.zshrc
+    \cd "$@" && ls
 }
 alias cd="cdls"
 
@@ -67,6 +67,9 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 alias ls='ls --color=auto -GF'
 alias ll='ls -alhF'
 alias la='ls -a'
+
+## diff
+alias diff='colordiff -u'
 
 # mkdir
 alias mkdir='mkdir -p'
@@ -114,11 +117,11 @@ alias dcp='docker compose ps'
 
 #laravel(phper向け)
 alias art='php artisan'
-alias arts='art serve'
-alias artr='art route:list'
-alias migrate='art migrate'
-alias rollback='art migrate:rollback'
-alias fresh='art migrate:fresh'
+alias arts='php artisan serve'
+alias artr='php artisan route:list'
+alias migrate='php artisan migrate'
+alias rollback='php artisan migrate:rollback'
+alias fresh='php artisan migrate:fresh'
 alias cc='php artisan config:clear && php artisan cache:clear && php artisan view:clear'
 alias seed='art db:seed'
 
