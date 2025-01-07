@@ -1,0 +1,27 @@
+[user]
+	name = M1n01
+	email = abe.minato.bz@gmail.com
+[core]
+	excludesfile = /Users/abeminato/.gitignore_global
+[commit]
+	template = /Users/abeminato/.stCommitMsg
+[color]
+	ui = auto
+[alias]
+	co = checkout
+	br = branch
+	ss = status -s
+	difff = diff --name-only
+	diffs = diff --cached
+	lg = log --graph --pretty=format:'%Cred%h%Creset - %s%C(yellow)%d%Creset %Cgreen(%cr:%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --date=iso
+	rb = rebase
+	sh = show
+	st = stash
+	unstage = reset HEAD
+	history = !git --no-pager reflog | awk '$3 == \"checkout:\" && /moving from/ {print $8}' | awk '!a[$0]++' | head | peco | xargs git switch
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+[init]
+	defaultBranch = main
