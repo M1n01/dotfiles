@@ -1,10 +1,3 @@
-[user]
-	name = M1n01
-	email = abe.minato.bz@gmail.com
-[core]
-	excludesfile = /Users/abeminato/.gitignore_global
-[commit]
-	template = /Users/abeminato/.stCommitMsg
 [color]
 	ui = auto
 [alias]
