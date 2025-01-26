@@ -14,7 +14,7 @@ git clone git@github.com:M1n01/dotfiles.git
 
 cd dotfiles
 
-// インストール
+# インストール
 ./.bin/install.sh
 ```
 
