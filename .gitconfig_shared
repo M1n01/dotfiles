@@ -18,7 +18,7 @@
 	followTags = true
 [fetch]
 	prune = true
-	pruneTags = true
+	# pruneTags = true
 	all = true
 
 # why the hell not
