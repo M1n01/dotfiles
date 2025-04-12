@@ -1,0 +1,53 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+	{
+		"key": "ctrl+[",
+		"command": "editor.action.outdentLines",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "cmd+[",
+		"command": "-editor.action.outdentLines",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+]",
+		"command": "editor.action.indentLines",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "cmd+]",
+		"command": "-editor.action.indentLines",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "cmd+l",
+		"command": "inlineChat.startWithCurrentLine",
+		"when": "editorFocus && github.copilot.chat.editor.enableLineTrigger && inlineChatHasProvider && !editorReadonly && !inlineChatVisible"
+	},
+	{
+		"key": "cmd+i",
+		"command": "-inlineChat.startWithCurrentLine",
+		"when": "editorFocus && github.copilot.chat.editor.enableLineTrigger && inlineChatHasProvider && !editorReadonly && !inlineChatVisible"
+	},
+	{
+		"key": "cmd+l",
+		"command": "workbench.panel.chat",
+		"when": "workbench.panel.chat.view.copilot.active"
+	},
+	{
+		"key": "ctrl+cmd+i",
+		"command": "-workbench.panel.chat",
+		"when": "workbench.panel.chat.view.copilot.active"
+	},
+	{
+		"key": "cmd+k",
+		"command": "workbench.action.quickchat.toggle",
+		"when": "chatIsEnabled"
+	},
+	{
+		"key": "shift+alt+cmd+l",
+		"command": "-workbench.action.quickchat.toggle",
+		"when": "chatIsEnabled"
+	}
+]

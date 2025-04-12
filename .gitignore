@@ -18,3 +18,5 @@
 !.gitkeep
 !/LICENSE
 !.gitconfig_shared
+
+!/vscode/

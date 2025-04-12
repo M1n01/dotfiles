@@ -1,0 +1,52 @@
+// Place your settings in this file to overwrite the default settings
+{
+  "security.workspace.trust.untrustedFiles": "open",
+  "explorer.confirmDragAndDrop": false,
+  "editor.renderWhitespace": "all",
+  "editor.quickSuggestions": {
+    "comments": "off",
+    "strings": "off",
+    "other": "on"
+  },
+  "editor.formatOnSave": true,
+  "workbench.startupEditor": "none",
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false
+  },
+  "github.copilot.chat.codeGeneration.instructions": [
+    {
+      "text": "ハルシネーションしないでね。"
+    }
+  ],
+  "editor.guides.bracketPairs": true,
+"editor.bracketPairColorization.enabled": false,
+"php.validate.executablePath": "/opt/homebrew/bin/php",
+  "files.autoSave": "afterDelay",
+  "update.showReleaseNotes": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "terminal.integrated.env.osx": {
+    "Q_NEW_SESSION": "1"
+  },
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "[c]": {
+    "editor.insertSpaces": false,
+    "editor.tabSize": 4
+  },
+  "liveshare.accessibility.soundsEnabled": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "files.insertFinalNewline": true,
+  "accessibility.signalOptions.volume": 0,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "solidity.telemetry": false,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.chat.codesearch.enabled": true,
+  "github.copilot.chat.agent.thinkingTool": true,
+  "chat.mcp.discovery.enabled": true,
+}
