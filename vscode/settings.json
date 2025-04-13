@@ -85,11 +85,6 @@
   "github.copilot.chat.codesearch.enabled": true,
   "github.copilot.chat.agent.thinkingTool": true,
   "chat.mcp.discovery.enabled": true,
-  "github.copilot.chat.codeGeneration.instructions": [
-    {
-      "text": "ハルシネーションしないでね。"
-    }
-  ],
   "javascript.updateImportsOnFileMove.enabled": "always",
   "liveServer.settings.donotShowInfoMsg": true,
   "liveshare.accessibility.soundsEnabled": false,
