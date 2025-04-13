@@ -1,52 +1,138 @@
-// Place your settings in this file to overwrite the default settings
 {
-  "security.workspace.trust.untrustedFiles": "open",
-  "explorer.confirmDragAndDrop": false,
-  "editor.renderWhitespace": "all",
+  "[c]": {
+    "editor.insertSpaces": false,
+    "editor.tabSize": 4
+  },
+  "[javascript]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "[javascriptreact]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "[jsonc]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "[rust]": {
+    "editor.insertSpaces": false,
+    "editor.tabSize": 4
+  },
+  "[typescript]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "[typescriptreact]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "accessibility.signalOptions.volume": 0,
+  "cSpell.userWords": [
+    "delegatecall",
+    "IERC",
+    "Laravel",
+    "neverthrow",
+    "Reentrancy",
+    "Supabase",
+    "tabler",
+    "vercel"
+  ],
+  "diffEditor.ignoreTrimWhitespace": true,
+  "editor.accessibilitySupport": "off",
+  "editor.bracketPairColorization.enabled": false,
+  "editor.formatOnSave": true,
+  "editor.guides.bracketPairs": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.insertSpaces": true,
+  "editor.minimap.enabled": false,
   "editor.quickSuggestions": {
     "comments": "off",
     "strings": "off",
     "other": "on"
   },
-  "editor.formatOnSave": true,
-  "workbench.startupEditor": "none",
-  "terminal.integrated.enableMultiLinePasteWarning": "never",
-  "editor.inlineSuggest.enabled": true,
+  "editor.renderWhitespace": "all",
+  "editor.tabSize": 2,
+  "explorer.confirmDragAndDrop": false,
+  "files.autoSave": "afterDelay",
+  "files.insertFinalNewline": true,
+  "git.autofetch": true,
+  "github.copilot.chat.agent.enabled": true,
+  "github.copilot.chat.codeGeneration.instructions": [
+    {
+      "text": "わからない場合は、『わからない』と答えてください。"
+    },
+    {
+      "text": "日本語で出力してください。"
+    }
+  ],
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "'example': '[prefix]: [reason for change]'"
+    }
+  ],
   "github.copilot.enable": {
     "*": true,
     "plaintext": true,
     "markdown": true,
     "scminput": false
   },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.chat.codesearch.enabled": true,
+  "github.copilot.chat.agent.thinkingTool": true,
+  "chat.mcp.discovery.enabled": true,
   "github.copilot.chat.codeGeneration.instructions": [
     {
       "text": "ハルシネーションしないでね。"
     }
   ],
-  "editor.guides.bracketPairs": true,
-"editor.bracketPairColorization.enabled": false,
-"php.validate.executablePath": "/opt/homebrew/bin/php",
-  "files.autoSave": "afterDelay",
-  "update.showReleaseNotes": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
   "liveServer.settings.donotShowInfoMsg": true,
-  "diffEditor.ignoreTrimWhitespace": true,
+  "liveshare.accessibility.soundsEnabled": false,
+  "mcp": {
+    "inputs": [
+      {
+        "description": "GitHub Personal Access Token",
+        "id": "github_token",
+        "password": true,
+        "type": "promptString"
+      }
+    ],
+    "servers": {
+      "github": {
+        "args": [
+          "run",
+          "-i",
+          "--rm",
+          "-e",
+          "GITHUB_PERSONAL_ACCESS_TOKEN",
+          "ghcr.io/github/github-mcp-server"
+        ],
+        "command": "docker",
+        "env": {
+          "GITHUB_PERSONAL_ACCESS_TOKEN": "${input:github_token}"
+        }
+      }
+    }
+  },
+  "php.validate.executablePath": "/opt/homebrew/bin/php",
+  "remote.defaultExtensionsIfInstalledLocally": [
+    "GitHub.copilot",
+    "GitHub.copilot-chat",
+    "GitHub.vscode-pull-request-github"
+  ],
+  "security.workspace.trust.untrustedFiles": "open",
+  "solidity.telemetry": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.env.osx": {
     "Q_NEW_SESSION": "1"
   },
-  "editor.insertSpaces": true,
-  "editor.tabSize": 2,
-  "[c]": {
-    "editor.insertSpaces": false,
-    "editor.tabSize": 4
-  },
-  "liveshare.accessibility.soundsEnabled": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "files.insertFinalNewline": true,
-  "accessibility.signalOptions.volume": 0,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "solidity.telemetry": false,
-  "github.copilot.nextEditSuggestions.enabled": true,
-  "github.copilot.chat.codesearch.enabled": true,
-  "github.copilot.chat.agent.thinkingTool": true,
-  "chat.mcp.discovery.enabled": true,
+  "update.showReleaseNotes": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "none"
 }
