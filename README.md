@@ -16,6 +16,9 @@ cd dotfiles
 
 # インストール
 ./.bin/install.sh
+
+# vscodeの設定をインストール
+./.bin/setup-vscode.sh
 ```
 
 ## 参考
