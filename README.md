@@ -22,3 +22,4 @@ cd dotfiles
 - [ようこそdotfilesの世界へ](https://qiita.com/yutkat/items/c6c7584d9795799ee164)
 - [zsh zshenv zshrc](https://qiita.com/shiro_usagi/items/09837eccb44c840942f1)
 - [.zshrc.localのススメ](https://qiita.com/awakia/items/1d5cd440ce58ef4fb8ae)
+- [Saving VS Code settings in your dotfiles](https://anhari.dev/blog/saving-vscode-settings-in-your-dotfiles)
