@@ -50,7 +50,7 @@ alias glo='git log --oneline'
 ## cherry-pick
 alias gcp='git cherry-pick'
 ## history
-alias gh='git history'
+alias ghi='git history'
 
 # Go
 alias gofa='gofmt -w ex*/*.go'
@@ -93,7 +93,7 @@ alias reload='source ~/.zshrc'
 # 安全策
 alias cp='cp -i'
 alias mv='mv -i'
-alias rm='rm -i'
+alias rm='trash'
 
 # MySQL
 alias ms='mysql.server'
@@ -106,7 +106,6 @@ alias di='docker images'
 alias drm='docker system prune'
 
 # docker compose
-alias dc='docker compose'
 alias dcu='docker compose up'
 alias dcd='docker compose down'
 alias dcs='docker compose start'
@@ -114,6 +113,9 @@ alias dce='docker compose end'
 alias dcr='docker compose restart'
 alias dcl='docker compose logs'
 alias dcp='docker compose ps'
+
+# minikube
+alias kubectl='minikube kubectl --'
 
 #laravel(phper向け)
 alias art='php artisan'
@@ -134,6 +136,10 @@ alias nrd='npm run dev'
 alias nhc='npx hardhat compile'
 alias nht='npx hardhat test'
 alias nhn='npx hardhat node'
+
+# yarn
+alias yd='yarn dev'
+alias yb='yarn build'
 
 # python
 alias p='python3'
