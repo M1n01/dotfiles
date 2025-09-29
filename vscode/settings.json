@@ -42,7 +42,12 @@
     "tabler",
     "vercel"
   ],
-  "chat.mcp.discovery.enabled": true,
+  "chat.mcp.discovery.enabled": {
+    "claude-desktop": true,
+    "windsurf": true,
+    "cursor-global": true,
+    "cursor-workspace": true
+  },
   "diffEditor.ignoreTrimWhitespace": true,
   "editor.accessibilitySupport": "off",
   "editor.bracketPairColorization.enabled": false,
