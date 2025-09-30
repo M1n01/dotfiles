@@ -151,7 +151,7 @@ alias mss='mysql.server start'
 alias tf='terraform'
 alias tfi='terraform init'
 alias tfp='terraform plan'
-alias tfa='terraform apply'
+alias tfa='terraform apply -auto-approve'
 alias tfd='terraform destroy'
 
 alias tfpf='terraform plan -var-file=personal.tfvars'
