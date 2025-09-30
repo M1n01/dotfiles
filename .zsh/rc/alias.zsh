@@ -145,6 +145,18 @@ alias ms='mysql.server'
 alias mss='mysql.server start'
 
 # =============================================================================
+# Terraform
+# =============================================================================
+
+alias tf='terraform'
+alias tfi='terraform init'
+alias tfp='terraform plan'
+alias tfa='terraform apply'
+alias tfd='terraform destroy'
+
+alias tfpf='terraform plan -var-file=personal.tfvars'
+
+# =============================================================================
 # Shell Commands
 # =============================================================================
 
