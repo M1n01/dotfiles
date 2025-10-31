@@ -150,6 +150,7 @@ alias mss='mysql.server start'
 
 alias tf='terraform'
 alias tfi='terraform init'
+alias tfir='terraform init -reconfigure'
 alias tfp='terraform plan'
 alias tfa='terraform apply -auto-approve'
 alias tfd='terraform destroy'
@@ -170,6 +171,7 @@ alias cd='cdls'
 alias ..='cd ..'
 alias ..2='cd ../..'
 alias ..3='cd ../../..'
+alias ..5='cd ../../../../..'
 
 # mkdir
 alias mkdir='mkdir -p'
