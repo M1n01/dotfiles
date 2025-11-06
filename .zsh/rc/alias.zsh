@@ -48,6 +48,26 @@ alias glo='git log --oneline' # One-line log
 alias gcp='git cherry-pick'   # Cherry-pick commits
 alias ghi='git history'       # Git history
 
+
+# =============================================================================
+# GitHub
+# =============================================================================
+
+function ghautoswitch() {
+	if ! email=$(git config user.email); then
+		echo "No email found in git config"
+		return 0
+	fi
+
+	if [ "$email" = "abe@smesh.jp" ]; then
+		gh auth switch --user abe-smesh
+	else
+		gh auth switch --user M1n01
+	fi
+}
+
+alias ghsw='ghautoswitch'
+
 # =============================================================================
 # Makefile
 # =============================================================================
