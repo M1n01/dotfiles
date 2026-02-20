@@ -106,11 +106,6 @@ alias pip='pipx'
 # =============================================================================
 
 # npm
-alias ni='npm install'
-alias nup='npm update'
-alias nrm='npm uninstall'
-alias nls='npm list'
-alias ngl='npm global ls'
 alias nrd='npm run dev'
 alias nrb='npm run build'
 
@@ -227,3 +222,4 @@ alias diff='colordiff -u'
 
 alias zshrc='vi ~/.zshrc'
 alias reload='source ~/.zshrc'
+alias lg='lazygit'
