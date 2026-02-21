@@ -23,3 +23,17 @@
 !.gitconfig_shared
 
 !/vscode/
+
+!/CLAUDE.md
+
+!/.claude/
+!/.claude/hooks/
+!/.claude/hooks/**
+!/.claude/skills/
+!/.claude/skills/**
+
+!/.agents/
+!/.agents/.skill-lock.json
+!/.agents/skills/
+!/.agents/skills/**
+.agents/skills/**/scripts/__pycache__/
