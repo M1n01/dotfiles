@@ -27,13 +27,7 @@
 !/CLAUDE.md
 
 !/.claude/
-!/.claude/hooks/
-!/.claude/hooks/**
-!/.claude/skills/
-!/.claude/skills/**
+!/.claude/**
 
 !/.agents/
-!/.agents/.skill-lock.json
-!/.agents/skills/
-!/.agents/skills/**
-.agents/skills/**/scripts/__pycache__/
+!/.agents/**
