@@ -27,7 +27,10 @@
 !/CLAUDE.md
 
 !/.claude/
-!/.claude/**
+!/.claude/CLAUDE.md
+!/.claude/hooks/
+!/.claude/hooks/**
+!/.claude/settings.local.json
 
 !/.agents/
 !/.agents/**
