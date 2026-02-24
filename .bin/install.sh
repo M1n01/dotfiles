@@ -64,6 +64,35 @@ link_nested_dir() {
   done
 }
 
+# Agent directories that receive skill symlinks from .agents/skills/
+SKILL_TARGETS=(".claude" ".codex" ".cursor")
+
+# Distribute skills from ~/.agents/skills/ to each agent's skills directory.
+# Each skill is symlinked as a directory: e.g. ~/.claude/skills/fix-pr -> ~/.agents/skills/fix-pr
+distribute_skills() {
+  local agents_skills="$HOME/.agents/skills"
+  [[ ! -d "$agents_skills" ]] && return
+
+  for target in "${SKILL_TARGETS[@]}"; do
+    local target_skills="$HOME/$target/skills"
+    command mkdir -p "$target_skills"
+
+    for skill_dir in "$agents_skills"/*/; do
+      [[ ! -d "$skill_dir" ]] && continue
+      local skill_name
+      skill_name="$(basename "$skill_dir")"
+      local dest="$target_skills/$skill_name"
+
+      if [[ -e "$dest" && ! -L "$dest" ]]; then
+        command mkdir -p "$HOME/.dotbackup/$target/skills"
+        command mv "$dest" "$HOME/.dotbackup/$target/skills/$skill_name"
+      fi
+
+      command ln -snf "$agents_skills/$skill_name" "$dest"
+    done
+  done
+}
+
 while [ $# -gt 0 ];do
   case ${1} in
     --debug|-d)
@@ -90,6 +119,10 @@ for d in "${NESTED_DIRS[@]}"; do
     link_nested_dir "$dotdir/$d"
   fi
 done
+
+# Distribute skills from .agents/skills/ to each agent directory
+command echo "distributing skills..."
+distribute_skills
 
 git config --global include.path "~/.gitconfig_shared"
 command echo -e "\e[1;36m Install completed!!!! \e[m"

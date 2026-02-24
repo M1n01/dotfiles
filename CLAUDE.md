@@ -25,6 +25,8 @@ Personal dotfiles repository for macOS. Manages shell (zsh), editor (vim, VSCode
 
 `install.sh` symlinks all `.*` files/directories from this repo into `$HOME`, skipping `.git`. Existing files are moved to `~/.dotbackup/`. It also sets `git config --global include.path "~/.gitconfig_shared"` to load shared git config.
 
+For nested directories (`.claude`, `.agents`), individual files are symlinked via `link_nested_dir()`. After that, `distribute_skills()` symlinks each skill directory from `~/.agents/skills/` into `~/.claude/skills/`, `~/.codex/skills/`, and `~/.cursor/skills/` so all agents share a single source of skills.
+
 ### Whitelist .gitignore
 
 The `.gitignore` uses an inverted pattern: it ignores everything (`/*`, `/.**`) then explicitly un-ignores tracked files with `!` prefixes. When adding a new dotfile, you must add a corresponding `!` entry to `.gitignore` or it won't be tracked.
@@ -35,6 +37,7 @@ The `.gitignore` uses an inverted pattern: it ignores everything (`/*`, `/.**`) 
 - `.zsh/rc/alias.zsh` — All shell aliases (git, docker, terraform, etc.)
 - `.gitconfig_shared` — Shared git config loaded via `include.path` (aliases, diff settings, push/fetch/merge preferences)
 - `.vimrc` — Vim configuration
+- `.agents/skills/` — Single source for all agent skills. Distributed to `.claude/`, `.codex/`, `.cursor/` via `install.sh`
 - `vscode/` — VSCode `settings.json`, `keybindings.json`, `snippets/`, and extension lists (`code_extensions`, `cursor_extensions.txt`)
 
 ### Multi-Account GitHub
