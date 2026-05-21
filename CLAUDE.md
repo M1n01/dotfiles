@@ -4,19 +4,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Personal dotfiles repository for macOS. Manages shell (zsh), editor (vim, VSCode), and git configurations using symlink-based deployment.
+Personal dotfiles repository for macOS. Manages shell (zsh), editor (vim), and git configurations using symlink-based deployment.
 
 ## Setup Commands
 
 ```bash
 # Install dotfiles (symlinks all dotfiles to $HOME, backs up existing ones to ~/.dotbackup)
 ./.bin/install.sh
-
-# Set up VSCode settings (symlinks settings, keybindings, and snippets)
-./.bin/setup_code.sh
-
-# Save current VSCode extensions list
-./.bin/save_code_extentions.sh
 ```
 
 ## Architecture
@@ -38,7 +32,7 @@ The `.gitignore` uses an inverted pattern: it ignores everything (`/*`, `/.**`) 
 - `.gitconfig_shared` — Shared git config loaded via `include.path` (aliases, diff settings, push/fetch/merge preferences)
 - `.vimrc` — Vim configuration
 - `.agents/skills/` — Single source for all agent skills. Distributed to `.claude/`, `.codex/`, `.cursor/` via `install.sh`
-- `vscode/` — VSCode `settings.json`, `keybindings.json`, `snippets/`, and extension lists (`code_extensions`, `cursor_extensions.txt`)
+- `cursor/` — Cursor extension list (`cursor_extensions.txt`)
 
 ### Multi-Account GitHub
 
