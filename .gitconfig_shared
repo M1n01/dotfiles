@@ -60,5 +60,4 @@
 	sh = show
 	st = stash
 	unstage = reset HEAD
-	history = !git --no-pager reflog | awk '$3 == \"checkout:\" && /moving from/ {print $8}' | awk '!a[$0]++' | head | peco | xargs git switch
-
+	hb = !git --no-pager reflog | awk '$3 == \"checkout:\" && /moving from/ {print $8}' | awk '!a[$0]++' | head | peco | xargs git switch

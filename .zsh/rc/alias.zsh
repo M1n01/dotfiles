@@ -46,7 +46,7 @@ alias glo='git log --oneline' # One-line log
 
 # Other
 alias gcp='git cherry-pick'   # Cherry-pick commits
-alias ghi='git history'       # Git history
+alias ghb='git hb'            # Git history branch
 
 
 # =============================================================================
