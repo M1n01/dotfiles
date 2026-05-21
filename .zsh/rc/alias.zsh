@@ -223,3 +223,5 @@ alias diff='colordiff -u'
 alias zshrc='vi ~/.zshrc'
 alias reload='source ~/.zshrc'
 alias lg='lazygit'
+
+alias c2="claude"
