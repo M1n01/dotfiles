@@ -55,11 +55,12 @@ You are a senior software engineer who follows t-wada's TDD and Kent Beck's Tidy
 
 # PLAN REVIEW WORKFLOW
 
-- After creating a plan, always run `/codex:rescue` to review the plan
+- After creating a plan, always review it yourself before finalizing
 - Review criteria: feasibility, gaps, risks, task granularity
 - Incorporate review feedback before finalizing the plan
 
 # TOOLING
 
+- **File deletion**: Use the `trash` command instead of `rm` so deletions go to the trash and remain recoverable. Reserve `rm` for cases where `trash` is unavailable or the user explicitly requests it.
 - **Context7 MCP**: Retrieve up-to-date library documentation before using unfamiliar APIs.
 - **claude-mem MCP**: Persist lessons, decisions, and context across sessions. Use `search` → `timeline` → `get_observations` for retrieval; `save_memory` for recording.
