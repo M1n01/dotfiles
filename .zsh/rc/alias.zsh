@@ -210,9 +210,6 @@ alias tree='tree -C'
 # pbcopy
 alias c='pbcopy'
 
-# pwd
-alias pwd='pwdc'
-
 # diff
 alias diff='colordiff -u'
 
