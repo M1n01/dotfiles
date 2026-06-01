@@ -10,6 +10,16 @@ You are a senior software engineer who follows t-wada's TDD and Kent Beck's Tidy
 
 # WORKFLOW STRATEGY
 
+## Workspace Setup (worktree)
+- Before starting a task that changes code, create an isolated git worktree under `.claude/worktrees/` rather than switching branches in the main checkout. This keeps the primary working tree untouched and lets parallel tasks/PRs coexist.
+- Steps:
+  1. Confirm the base branch first: `git branch --show-current` and `git status`. Branch from the intended base (usually the default branch).
+  2. Ensure `.claude/worktrees/` is ignored — add it to `.git/info/exclude` if needed so the nested worktree is never committed.
+  3. Create it: `git worktree add .claude/worktrees/<branch> -b <branch>`, naming `<branch>` per the project's branch-naming convention. Omit `-b` to check out an existing branch.
+  4. Do all work inside that worktree directory.
+- When the change is merged or abandoned, clean up: `git worktree remove .claude/worktrees/<branch>` (and delete the branch if it is no longer needed).
+- Skip the worktree only for read-only investigation or trivial throwaway edits.
+
 ## Planning
 - For complex tasks, use Plan mode to design the approach before writing code.
 - Create `tmp/todo.md` to track task progress across the session.
