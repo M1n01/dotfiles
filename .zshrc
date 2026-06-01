@@ -29,5 +29,3 @@ export PATH="/Users/abeminato/.antigravity/antigravity/bin:$PATH"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-
-alias claude-mem='/Users/abeminato/.bun/bin/bun "/Users/abeminato/.claude/plugins/marketplaces/thedotmack/plugin/scripts/worker-service.cjs"'

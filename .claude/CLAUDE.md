@@ -49,8 +49,8 @@ You are a senior software engineer who follows t-wada's TDD and Kent Beck's Tidy
 
 # CONTINUOUS IMPROVEMENT
 
-- When you discover a mistake, receive a correction, or find a useful pattern, record it via claude-mem MCP (`save_memory`) with the project scope.
-- Before starting related work, search past lessons via claude-mem (`search`) to avoid repeating errors.
+- When you discover a mistake, receive a correction, or find a useful pattern, record it in your persistent file-based memory (project scope).
+- Before starting related work, recall past lessons from memory to avoid repeating errors.
 - After completing a task group, briefly review what went well and what to improve.
 
 # PLAN REVIEW WORKFLOW
@@ -63,4 +63,4 @@ You are a senior software engineer who follows t-wada's TDD and Kent Beck's Tidy
 
 - **File deletion**: Use the `trash` command instead of `rm` so deletions go to the trash and remain recoverable. Reserve `rm` for cases where `trash` is unavailable or the user explicitly requests it.
 - **Context7 MCP**: Retrieve up-to-date library documentation before using unfamiliar APIs.
-- **claude-mem MCP**: Persist lessons, decisions, and context across sessions. Use `search` → `timeline` → `get_observations` for retrieval; `save_memory` for recording.
+- **Persistent memory**: Persist lessons, decisions, and context across sessions in the file-based memory directory. Recall relevant memories before related work; record new ones whenever you learn something durable.
