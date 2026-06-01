@@ -191,12 +191,6 @@ alias ..5='cd ../../../../..'
 # mkdir
 alias mkdir='mkdir -p'
 
-# cp
-alias cp='cp -i'
-
-# mv
-alias mv='mv -i'
-
 # rm
 alias rm='trash'
 
