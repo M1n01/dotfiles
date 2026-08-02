@@ -124,6 +124,9 @@ done
 command echo "distributing skills..."
 distribute_skills
 
+# Render shared and Codex-specific instructions into ~/.codex/AGENTS.md
+command echo "syncing agent instructions..."
+"$dotdir/.bin/sync-agent-instructions.sh"
+
 git config --global include.path "~/.gitconfig_shared"
 command echo -e "\e[1;36m Install completed!!!! \e[m"
-

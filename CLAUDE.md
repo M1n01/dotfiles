@@ -19,7 +19,7 @@ Personal dotfiles repository for macOS. Manages shell (zsh), editor (vim), and g
 
 `install.sh` symlinks all `.*` files/directories from this repo into `$HOME`, skipping `.git`. Existing files are moved to `~/.dotbackup/`. It also sets `git config --global include.path "~/.gitconfig_shared"` to load shared git config.
 
-For nested directories (`.claude`, `.agents`), individual files are symlinked via `link_nested_dir()`. After that, `distribute_skills()` symlinks each skill directory from `~/.agents/skills/` into `~/.claude/skills/`, `~/.codex/skills/`, and `~/.cursor/skills/` so all agents share a single source of skills.
+For nested directories (`.claude`, `.agents`), individual files are symlinked via `link_nested_dir()`. After that, `distribute_skills()` symlinks each skill directory from `~/.agents/skills/` into `~/.claude/skills/`, `~/.codex/skills/`, and `~/.cursor/skills/` so all agents share a single source of skills. Finally, `sync-agent-instructions.sh` combines shared and Codex-specific instructions into `~/.codex/AGENTS.md`.
 
 ### Whitelist .gitignore
 
@@ -32,6 +32,9 @@ The `.gitignore` uses an inverted pattern: it ignores everything (`/*`, `/.**`) 
 - `.gitconfig_shared` — Shared git config loaded via `include.path` (aliases, diff settings, push/fetch/merge preferences)
 - `.vimrc` — Vim configuration
 - `.agents/skills/` — Single source for all agent skills. Distributed to `.claude/`, `.codex/`, `.cursor/` via `install.sh`
+- `.agents/common.md` — Shared global instructions for coding agents
+- `.agents/codex.md` / `.agents/claude.md` — Tool-specific global instructions
+- `.bin/sync-agent-instructions.sh` — Generates `~/.codex/AGENTS.md` from the shared and Codex-specific sources
 - `cursor/` — Cursor extension list (`cursor_extensions.txt`)
 
 ### Multi-Account GitHub
