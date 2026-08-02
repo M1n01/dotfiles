@@ -44,6 +44,9 @@ alias gl='git log'
 alias glg='git log --graph --abbrev-commit --date=iso'  # Graph log
 alias glo='git log --oneline' # One-line log
 
+# Worktree
+alias gw='git worktree'
+
 # Other
 alias gcp='git cherry-pick'   # Cherry-pick commits
 alias ghb='git hb'            # Git history branch
