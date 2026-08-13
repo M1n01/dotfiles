@@ -10,19 +10,17 @@ function cdls() {
 # GitHub
 # =============================================================================
 
-function ghautoswitch() {
-	local email
+function gh() {
+	local current_dir
+	local company_dir="$HOME/dev/company/smesh"
+	local gh_config_dir="$HOME/.config/gh"
 
-	if ! email=$(git config user.email); then
-		echo "No email found in git config"
-		return 0
+	current_dir=$(pwd -P) || return
+	if [[ "$current_dir" == "$company_dir" || "$current_dir" == "$company_dir"/* ]]; then
+		gh_config_dir="$HOME/.config/gh-smesh"
 	fi
 
-	if [ "$email" = "abe@smesh.jp" ]; then
-		gh auth switch --user abe-smesh
-	else
-		gh auth switch --user M1n01
-	fi
+	GH_CONFIG_DIR="$gh_config_dir" command gh "$@"
 }
 
 # =============================================================================

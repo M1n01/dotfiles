@@ -40,4 +40,4 @@ The `.gitignore` uses an inverted pattern: it ignores everything (`/*`, `/.**`) 
 
 ### Multi-Account GitHub
 
-The `ghautoswitch` function in `functions.zsh` switches `gh` auth between accounts based on the repo's `user.email` git config (`abe@smesh.jp` → `abe-smesh`, otherwise → `M1n01`).
+The `gh` wrapper in `functions.zsh` selects an isolated `GH_CONFIG_DIR` based on the current directory (`~/dev/company/smesh` → `~/.config/gh-smesh`, otherwise → `~/.config/gh`). Git identity is selected separately through `.gitconfig`'s conditional include.
