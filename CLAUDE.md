@@ -27,8 +27,9 @@ The `.gitignore` uses an inverted pattern: it ignores everything (`/*`, `/.**`) 
 
 ### File Structure
 
-- `.zshrc` / `.zshenv` — Shell config. `.zshrc` sources `~/.zsh/rc/functions.zsh`, `~/.zshrc.local`, and `.zsh/rc/alias.zsh`
+- `.zshrc` / `.zshenv` — Shell config. `.zshrc` sources functions, prompt, machine-local settings, and aliases
 - `.zsh/rc/functions.zsh` — Shell functions for terminal helpers and account-aware CLI wrappers
+- `.zsh/rc/prompt.zsh` — Shell prompt with directory-aware Git and GitHub account display
 - `.zsh/rc/alias.zsh` — All shell aliases (git, docker, terraform, etc.)
 - `.gitconfig_shared` — Shared git config loaded via `include.path` (aliases, diff settings, push/fetch/merge preferences)
 - `.vimrc` — Vim configuration

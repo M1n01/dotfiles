@@ -5,6 +5,7 @@
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
 [ -f ~/.zsh/rc/functions.zsh ] && source ~/.zsh/rc/functions.zsh
+[ -f ~/.zsh/rc/prompt.zsh ] && source ~/.zsh/rc/prompt.zsh
 
 # ローカルの設定を読み込み
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
