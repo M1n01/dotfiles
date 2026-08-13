@@ -27,7 +27,8 @@ The `.gitignore` uses an inverted pattern: it ignores everything (`/*`, `/.**`) 
 
 ### File Structure
 
-- `.zshrc` / `.zshenv` — Shell config. `.zshrc` sources `~/.zshrc.local` for machine-specific settings and `.zsh/rc/alias.zsh` for aliases
+- `.zshrc` / `.zshenv` — Shell config. `.zshrc` sources `~/.zsh/rc/functions.zsh`, `~/.zshrc.local`, and `.zsh/rc/alias.zsh`
+- `.zsh/rc/functions.zsh` — Shell functions for terminal helpers and account-aware CLI wrappers
 - `.zsh/rc/alias.zsh` — All shell aliases (git, docker, terraform, etc.)
 - `.gitconfig_shared` — Shared git config loaded via `include.path` (aliases, diff settings, push/fetch/merge preferences)
 - `.vimrc` — Vim configuration
@@ -39,4 +40,4 @@ The `.gitignore` uses an inverted pattern: it ignores everything (`/*`, `/.**`) 
 
 ### Multi-Account GitHub
 
-The `ghautoswitch` function in `alias.zsh` switches `gh` auth between accounts based on the repo's `user.email` git config (`abe@smesh.jp` → `abe-smesh`, otherwise → `M1n01`).
+The `ghautoswitch` function in `functions.zsh` switches `gh` auth between accounts based on the repo's `user.email` git config (`abe@smesh.jp` → `abe-smesh`, otherwise → `M1n01`).
