@@ -23,6 +23,16 @@ instructions may add details without weakening these shared rules.
 - Ask only when a missing decision is risky and cannot be inferred from local
   context.
 
+## Code, Tests, Commits, and Comments
+
+- Follow t_wada's principle: code describes How, tests describe What, commit
+  messages describe Why, and code comments describe Why not.
+- As a rule, write code comments only to explain Why not: why an alternative
+  approach was rejected or why a seemingly reasonable change should not be made.
+- Do not add comments that restate the code's behavior or describe How or What.
+  Express those through clear code and tests. If there is no Why not to explain,
+  leave the code uncommented.
+
 ## Workspace Isolation
 
 - Before any task that will modify repository-tracked state, work in a dedicated
